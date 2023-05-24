@@ -1,0 +1,57 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-card-main {
+  width: 450px;
+  height: 520px;
+  padding: 20px 30px 20px 30px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0px 0px 2px grey;
+}
+
+.mat-mdc-card-subtitle{
+  margin: 1.5em 0 1.5em 0;
+}
+.login-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.create-acc-action {
+  color: #1a73e8;
+  font-size: 1.1em;
+  padding: 0;
+  font-weight: 500;
+}
+.forget-email-action,
+.forget-pass-action,.learn-more {
+  margin: 3px 0 5px 0;
+  color: #1a73e8;
+  font-size: 1.1em;
+}
+
+.mat-mdc-raised-button.mat-primary {
+  --mdc-protected-button-container-color: #4285f4;
+  --mdc-protected-button-label-text-color: #fff;
+}
+.mat-mdc-button:not(:disabled) {
+  color: #4285f4;
+}
+
+@media screen  and (min-width: 270px) and (max-width:450px) {
+  .login-card-main{
+    width: 80vw;
+  }
+}
+

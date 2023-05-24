@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//Remote Pading of Mat-cart-content
+.mat-mdc-card-content {
+  display: block;
+  padding: 0px !important;
+}
