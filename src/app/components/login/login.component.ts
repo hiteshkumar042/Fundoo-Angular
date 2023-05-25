@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../services/userservices/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +12,13 @@ import { UserService } from '../../services/userservices/user.service';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   submitted = false;
-  BaseURL = 'http://fundoonotes.incubation.bridgelabz.com/api/';
+  token: string="";
 
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private snackBar: MatSnackBar,
+    private router : Router
   ) {}
 
   //error message
@@ -37,8 +41,18 @@ export class LoginComponent implements OnInit {
     } else {
       return this.userService
         .LogInService(this.loginForm.value)
-        .subscribe((res) => {
+        .subscribe((res:any) => {
           console.log(res);
+          //token storing in variable
+          this.token = res.id
+          //strong token in local storage
+          localStorage.setItem('token',this.token)
+          //After successful login redirect to dashboard
+          this.router.navigateByUrl('/dashboard');
+          //for prompting a snackbar
+          this.snackBar.open('Log in Success !!!', '', {
+            duration: 4000,
+          });
         });
     }
   }

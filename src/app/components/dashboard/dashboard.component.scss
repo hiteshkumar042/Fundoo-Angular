@@ -1,0 +1,195 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+//Search Box CSS
+
+.search {
+  border: 2px solid #cf5c3f;
+  overflow: auto;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.search input[type="text"] {
+  border: 0px;
+  width: 67%;
+  padding: 10px 10px;
+}
+
+.search input[type="text"]:focus {
+  outline: 0;
+}
+
+.search input[type="submit"] {
+  border: 0px;
+  background: none;
+  background-color: #cf5c3f;
+  color: #fff;
+  float: right;
+  padding: 10px;
+}
+
+/* ===========================
+   ====== Medua Query for Search Box ====== 
+   =========================== */
+
+@media only screen and (min-width: 150px) and (max-width: 780px) {
+  .search {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+//Nav bar background color
+.mat-toolbar.mat-primary {
+  background: #f9faff;
+  color: #fff;
+}
+
+//Left part title
+.left-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Heading
+.app-name-title {
+  color: #5f6368;
+  margin-left: 0.5em;
+  
+}
+
+
+//Search Bar
+.center-part {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 20%;
+  flex-direction: row;
+}
+.mat-search-icon {
+  color: #5f6368;
+  background-color: #e9eaea;
+  border-radius: 5px 0px 0px 5px;
+  height: 45px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.search-nav-field {
+  width: 600px;
+  height: 45px;
+  border: none;
+  background-color: #e9eaea;
+  outline: none;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.search-nav-field:focus {
+  outline: none;
+  border: none;
+}
+
+input[type="text"]::placeholder {
+  padding-left: 0.5em;
+  font-size: 16px;
+}
+
+//Right Part CSS
+.right-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15vw
+}
+
+//Icons
+
+.icon-border {
+  color: #5f6368;
+}
+.profile-contain{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+}
+.icons-contain{
+  display: flex;
+  justify-content: space-around;
+  width: 8em;
+}
+
+.gb_k_gbii {
+  border-radius: 1.5em;
+}
+
+
+//navbar-main
+
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+//Responsiveness of navigation Bar
+@media screen and (min-width: 600px) and (max-width:1100px){
+  .center-part{
+    width: 100px;
+  }
+}
+
+@media screen and (max-width:975px) {
+  .app-name-title{
+    display:none;
+  }
+}
+
+@media screen and (min-width:0px) and  (max-width:600px) {
+  .center-part{
+    display: none;
+  }
+  .app-name-title{
+    display: block;
+  }
+}
+
+@media screen and (min-width:0px) and  (max-width:400px) {
+  .icons-contain{
+  display: none;
+  }
+}

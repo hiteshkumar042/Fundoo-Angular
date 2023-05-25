@@ -18,7 +18,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassword.component';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatGridListModule} from '@angular/material/grid-list';
 
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {NgIf, NgFor} from '@angular/common';
 
 
 @NgModule({
@@ -35,7 +41,9 @@ import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassw
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,MatFormFieldModule,MatInputModule,MatIconModule,
-    MatButtonModule,MatCheckboxModule,FormsModule,ReactiveFormsModule,HttpClientModule
+    MatButtonModule,MatCheckboxModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatSnackBarModule,MatSidenavModule,
+    NgFor,NgIf,MatToolbarModule,MatButtonModule,MatIconModule,MatSidenavModule,MatListModule,MatGridListModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

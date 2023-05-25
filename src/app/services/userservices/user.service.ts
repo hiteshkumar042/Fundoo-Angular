@@ -16,4 +16,23 @@ export class UserService {
     }
     return this.httpService.PostService('user/login',reqPayLoad,httpHeadersOptions)
   } 
+
+
+  SignUpService(reqPayLoad:any){
+    let httpHeadersOptions= {
+      headers : new HttpHeaders({
+        contentType : 'application/json'
+      })
+    }
+    return this.httpService.PostService('user/userSignUp',reqPayLoad,httpHeadersOptions)
+  }
+
+  ForgetPasswordService(reqPayLoad:any){
+    let httpHeadersOptions= {
+      headers : new HttpHeaders({
+        contentType : 'application/json'
+      })
+    }
+    return this.httpService.PostService('user/reset-password',reqPayLoad,httpHeadersOptions)
+  }
 }
