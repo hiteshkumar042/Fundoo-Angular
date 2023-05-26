@@ -1,12 +1,8 @@
-.example-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
+// .mdc-list-item:hover{
+
+// background-color: #FEEFC3;
+
+// }
 
 .example-is-mobile .example-toolbar {
   position: fixed;
@@ -26,46 +22,6 @@
   flex: 1 0 auto;
 }
 
-//Search Box CSS
-
-.search {
-  border: 2px solid #cf5c3f;
-  overflow: auto;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-}
-
-.search input[type="text"] {
-  border: 0px;
-  width: 67%;
-  padding: 10px 10px;
-}
-
-.search input[type="text"]:focus {
-  outline: 0;
-}
-
-.search input[type="submit"] {
-  border: 0px;
-  background: none;
-  background-color: #cf5c3f;
-  color: #fff;
-  float: right;
-  padding: 10px;
-}
-
-/* ===========================
-   ====== Medua Query for Search Box ====== 
-   =========================== */
-
-@media only screen and (min-width: 150px) and (max-width: 780px) {
-  .search {
-    width: 95%;
-    margin: 0 auto;
-  }
-}
-
 //Nav bar background color
 .mat-toolbar.mat-primary {
   background: #f9faff;
@@ -83,6 +39,9 @@
 .app-name-title {
   color: #5f6368;
   margin-left: 0.5em;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 22px;
   
 }
 
@@ -151,7 +110,7 @@ input[type="text"]::placeholder {
   width: 8em;
 }
 
-.gb_k_gbii {
+.gb_k_gb {
   border-radius: 1.5em;
 }
 

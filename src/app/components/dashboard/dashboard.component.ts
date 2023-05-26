@@ -21,7 +21,8 @@ export class DashboardComponent implements OnDestroy {
   );
 
   // private _mobileQueryListener: () => void;
-
+    
+  
   constructor( media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     // this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -31,5 +32,4 @@ export class DashboardComponent implements OnDestroy {
   ngOnDestroy(): void {
     // this.mobileQuery.removeListener(this._mobileQueryListener);
   }
-
 }

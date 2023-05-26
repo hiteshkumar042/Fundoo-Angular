@@ -21,10 +21,12 @@ import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassw
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatGridListModule} from '@angular/material/grid-list';
-
+import {MatRippleModule} from '@angular/material/core';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {NgIf, NgFor} from '@angular/common';
+import { CreatenoteComponent } from './components/createnote/createnote.component';
+import { IconsComponent } from './components/icons/icons.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import {NgIf, NgFor} from '@angular/common';
     SignupComponent,
     ResetpasswordComponent,
     DashboardComponent,
-    ForgetpasswordComponent
+    ForgetpasswordComponent,
+    CreatenoteComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,7 @@ import {NgIf, NgFor} from '@angular/common';
     BrowserAnimationsModule,
     MatCardModule,MatFormFieldModule,MatInputModule,MatIconModule,
     MatButtonModule,MatCheckboxModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatSnackBarModule,MatSidenavModule,
-    NgFor,NgIf,MatToolbarModule,MatButtonModule,MatIconModule,MatSidenavModule,MatListModule,MatGridListModule
+    NgFor,NgIf,MatToolbarModule,MatButtonModule,MatIconModule,MatSidenavModule,MatListModule,MatGridListModule,MatRippleModule
 
   ],
   providers: [],
