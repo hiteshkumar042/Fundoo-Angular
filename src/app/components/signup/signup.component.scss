@@ -13,8 +13,6 @@
 .signup-container{
     width: 750px;
     height: 610px;
-    // width: 50%;
-    // height: 80%;
     display: flex;
     flex-direction: row;
     padding: 3em;
@@ -63,28 +61,16 @@
 .fname-m5,.pswd-m5{
     margin-right: 1em;
 }
-//Input Field
-// ::ng-deep .mat-mdc-text-field-wrapper {
-//     height: 40px !important;
-//     flex: auto;
-// }
 
-// ::ng-deep .mat-mdc-form-field-infix {
-//     flex: auto;
-//     min-width: 0;
-//     width: 160px !important;
-//     position: relative;
-//     box-sizing: border-box;
-// }
 
 .mat-mdc-raised-button.mat-primary{
     --mdc-protected-button-container-color: #4285F4;
     --mdc-protected-button-label-text-color: #fff;
 }
 
-.mat-mdc-button:not(:disabled) {
-    color: #4285F4 !important;
-}
+// .mat-mdc-button:not(:disabled) {
+//     color: #4285F4 !important;
+// }
 
 
 //Responsive

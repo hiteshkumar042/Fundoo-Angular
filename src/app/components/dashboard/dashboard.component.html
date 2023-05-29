@@ -24,11 +24,8 @@
             <div class="profile-contain">
                 <mat-icon class="icon-border">apps</mat-icon>
                 <img class="gb_k_gb"
-                    src="../../assets/g-profile.png">
+                    src="https://lh3.googleusercontent.com/a/AAcHTtdaed00nAqNDAvOiRnYDL_MNizKPWlNgFJJbMc7QA=s360-c-no">
             </div>
-
-
-
         </div>
 
     </mat-toolbar>
@@ -70,10 +67,7 @@
     <!------------------>
     <!-- Main-content -->
     <!------------------>
-    <mat-sidenav-content style="border: 2px solid lightgreen; padding: 2em;">
-        <!-- <mat-grid-list cols="8" rowHeight="1:1">
-            <mat-grid-tile *ngFor="let content of fillerContent">{{content}}</mat-grid-tile>
-        </mat-grid-list> -->
-        <app-createnote></app-createnote>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>

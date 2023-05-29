@@ -46,7 +46,10 @@
             <mat-card-subtitle class="forget-email-action">Forget email?</mat-card-subtitle>
             <mat-form-field appearance="outline" style="width:100%" >
                 <mat-label>Password</mat-label>
-                <input matInput formControlName="password">
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
                 <mat-error>{{passLoginError}}</mat-error>
             </mat-form-field>
             <a routerLink="forget-password">

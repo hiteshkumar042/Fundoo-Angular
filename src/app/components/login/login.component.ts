@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   submitted = false;
   token: string="";
+  hide = true;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -48,7 +49,7 @@ export class LoginComponent implements OnInit {
           //strong token in local storage
           localStorage.setItem('token',this.token)
           //After successful login redirect to dashboard
-          this.router.navigateByUrl('/dashboard');
+          this.router.navigateByUrl('/dashboard/notes');
           //for prompting a snackbar
           this.snackBar.open('Log in Success !!!', '', {
             duration: 4000,

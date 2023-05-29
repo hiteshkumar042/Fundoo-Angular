@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class CreatenoteComponent {
   takeNoteCondition = true;
   takeNoteTwoCall(){
-    this.takeNoteCondition=false;
+    this.takeNoteCondition=!this.takeNoteCondition;
   }
 }

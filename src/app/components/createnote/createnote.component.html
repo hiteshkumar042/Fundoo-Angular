@@ -31,14 +31,18 @@
         <!-- First Row -->
         <div class="note-two-title-container">
             <input type="text" placeholder="Title" class='take-note-two-input-title'>
-            <mat-icon class="material-icons- icon-click-effect">push_pin</mat-icon>
+            <button matTooltip="Push pin" class="all-icons">
+                <img src="../../../assets//push_pin_FILL0_wght400_GRAD0_opsz40.svg">
+        
+            </button>
         </div>
         <!-- Second Row -->
         <input type="text" placeholder="Take a note..." class="take-note-two-content">
 
         <!-- Third Row -->
-        <div class="note-two-icons-container">
-            <app-icons></app-icons>
+        <div class="icons-container">
+            <app-icons style="width: 75%;"></app-icons>
+            <button mat-button (click)="takeNoteTwoCall()" >Close</button>
         </div>
     </mat-card>
 </ng-template>

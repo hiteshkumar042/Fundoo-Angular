@@ -11,7 +11,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import {MatCheckboxModule} from '@angular/material/checkbox';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import {FormsModule} from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
@@ -27,6 +26,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {NgIf, NgFor} from '@angular/common';
 import { CreatenoteComponent } from './components/createnote/createnote.component';
 import { IconsComponent } from './components/icons/icons.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { DisplaynoteComponent } from './components/displaynote/displaynote.component';
+import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 
 @NgModule({
@@ -38,7 +44,9 @@ import { IconsComponent } from './components/icons/icons.component';
     DashboardComponent,
     ForgetpasswordComponent,
     CreatenoteComponent,
-    IconsComponent
+    IconsComponent,
+    DisplaynoteComponent,
+    GetallnotesComponent
   ],
   imports: [
     BrowserModule,
@@ -46,8 +54,8 @@ import { IconsComponent } from './components/icons/icons.component';
     BrowserAnimationsModule,
     MatCardModule,MatFormFieldModule,MatInputModule,MatIconModule,
     MatButtonModule,MatCheckboxModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatSnackBarModule,MatSidenavModule,
-    NgFor,NgIf,MatToolbarModule,MatButtonModule,MatIconModule,MatSidenavModule,MatListModule,MatGridListModule,MatRippleModule
-
+    NgFor,NgIf,MatToolbarModule,MatButtonModule,MatIconModule,MatSidenavModule,MatListModule,MatGridListModule,MatRippleModule,
+    MatTooltipModule,MatMenuModule,FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

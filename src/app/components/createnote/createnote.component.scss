@@ -4,7 +4,7 @@
 .takenoteone-container{
     width: 40vw;
     height: 6vh;
-    margin: auto;
+    margin: 1em auto;
     padding: 2px;
     display: flex;
     flex-direction: row;
@@ -65,7 +65,7 @@
 .takenotetwo-container{
     width: 40vw;
     min-height: 17vh;
-    margin: auto;
+    margin: 1em auto;
     padding: 1em;
     display: flex;
     flex-direction: column;
@@ -114,6 +114,24 @@
     color: #4C4C4C;
  }
 
+ //push pin 
+ img{
+    width: 32px;
+    height: 19px;
+}
+
+ .all-icons{
+    border: none;
+    border-radius: 30%;
+    background: none;
+    transition: width 0.6s, height 0.6s;
+ }
+
+ .all-icons:hover{
+    background-color: rgb(223, 216, 216);
+    cursor: pointer;
+}
+
  //take Note 2 Responsiveness
  @media screen and  (max-width:655px) {
     .take-a-note-input{
@@ -136,8 +154,13 @@
     }
 }
 
-//icon container take note 2
+//icon Container
 
-.note-two-icons-container{
-   border: 1px solid red;
+.icons-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    
 }

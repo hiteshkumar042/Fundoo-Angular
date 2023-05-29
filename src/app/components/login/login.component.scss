@@ -14,7 +14,7 @@
 }
 
 .mat-mdc-card-subtitle{
-  margin: 1.5em 0 1.5em 0;
+  margin: 0em 0 1.5em 0;
 }
 .login-card-content {
   display: flex;
@@ -34,9 +34,14 @@
   padding: 0;
   font-weight: 500;
 }
-.forget-email-action,
+.forget-email-action{
+  margin-bottom: 1.3em;
+  color: #1a73e8;
+  font-size: 1.1em;
+}
+
 .forget-pass-action,.learn-more {
-  margin: 3px 0 5px 0;
+  margin: 3px 0 8px 0;
   color: #1a73e8;
   font-size: 1.1em;
 }

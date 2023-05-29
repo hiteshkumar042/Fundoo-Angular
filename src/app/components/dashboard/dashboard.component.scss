@@ -1,8 +1,5 @@
-// .mdc-list-item:hover{
+*{box-sizing: border-box;}
 
-// background-color: #FEEFC3;
-
-// }
 
 .example-is-mobile .example-toolbar {
   position: fixed;
@@ -50,7 +47,7 @@
 .center-part {
   display: flex;
   align-items: center;
-  position: fixed;
+  position: absolute;
   left: 20%;
   flex-direction: row;
 }
@@ -112,6 +109,8 @@ input[type="text"]::placeholder {
 
 .gb_k_gb {
   border-radius: 1.5em;
+  width: 30px;
+  height: 30px;
 }
 
 
@@ -151,4 +150,13 @@ input[type="text"]::placeholder {
   .icons-contain{
   display: none;
   }
+}
+
+//to remove extra space right side
+.mat-drawer-content {
+  position: relative;
+  z-index: 1;
+  /* display: ; */
+  height: 100%;
+   overflow:hidden;
 }

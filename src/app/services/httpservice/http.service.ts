@@ -7,6 +7,7 @@ import {HttpClient,HttpHeaders} from '@angular/common/http'
 export class HttpService {
   BaseUrl= "http://fundoonotes.incubation.bridgelabz.com/api/"
   constructor(private httpClient:HttpClient){ }
+  
   //Post Services
   PostService(url:any,reqBody:any,httpHeadersOptions:any){
     //backend Hit

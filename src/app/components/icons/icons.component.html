@@ -1,1 +1,40 @@
-<p>icons works!</p>
+<div class="icons-comp-container">
+
+    <!-- remind me icon -->
+    <button matTooltip="Remind me" class="all-icons">
+        <img src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz40.svg">
+
+    </button>
+    <!-- collaborator icon -->
+    <button matTooltip="Collaborator" class="all-icons">
+        <img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz40.svg">
+
+    </button>
+    <!-- background color icon -->
+    <button matTooltip="Background options" class="all-icons">
+        <img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz40.svg">
+
+    </button>
+    <!-- add image icons -->
+    <button matTooltip="Add image" class="all-icons">
+        <img src="../../../assets/image_FILL0_wght400_GRAD0_opsz40.svg">
+
+    </button>
+    <!-- Archive icon -->
+    <button matTooltip="Archive" class="all-icons">
+        <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz40.svg">
+    </button>
+    <!-- More icon -->
+    <button matTooltip="More" [matMenuTriggerFor]="more" class="all-icons">
+        <img src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz40.svg">
+    </button>
+
+    <mat-menu class="more-icons" #more="matMenu">
+        <button mat-menu-item>Delete note</button>
+        <button mat-menu-item>Add label</button>
+        <button mat-menu-item>Add drawing</button>
+        <button mat-menu-item>Make a copy</button>
+        <button mat-menu-item>Show tick boxes</button>
+        <button mat-menu-item>Copy to Google Docs</button>
+    </mat-menu>
+</div>
