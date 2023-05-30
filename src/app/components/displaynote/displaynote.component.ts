@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-displaynote',
   templateUrl: './displaynote.component.html',
-  styleUrls: ['./displaynote.component.scss']
+  styleUrls: ['./displaynote.component.scss'],
 })
-export class DisplaynoteComponent {
-  showIcons:boolean=false
+export class DisplaynoteComponent implements OnInit {
+  ngOnInit(){
+   
+  }
+  showIcons: boolean = false;
+
+  @Input() noteThreeData: any = '';
 }

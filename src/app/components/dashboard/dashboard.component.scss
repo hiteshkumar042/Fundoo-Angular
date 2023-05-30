@@ -94,6 +94,12 @@ input[type="text"]::placeholder {
 
 .icon-border {
   color: #5f6368;
+  transition: transform 0.3s ease;
+}
+
+.icon-border:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 .profile-contain{
   display: flex;
@@ -159,4 +165,37 @@ input[type="text"]::placeholder {
   /* display: ; */
   height: 100%;
    overflow:hidden;
+}
+
+
+// Side Navbar CSS
+
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+.nav-menu:hover{
+  background-color: #F1F3F4;
+  border-radius: 0 2em 2em 0 ;
+
+}
+
+.selected{
+  background-color: #FEEFC3;
+  pointer-events: none;
+  border-radius: 0 3em 3em 0;
+}
+
+
+.nav-icon{
+  width: 25px;
+  height: 25px;
+  margin-right: 1.4em;
+}
+.nav-text{
+  font-size: 16px;
+  margin-bottom: 1.3em;
 }

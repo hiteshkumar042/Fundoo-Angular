@@ -10,6 +10,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0px 0px 2px grey ;
 }
 .take-a-note-input::placeholder{
    padding-left: 12px;
@@ -45,6 +46,7 @@
     }
     .takenoteone-container{
         width: 80vw;
+        box-shadow: 0px 0px 2px grey 
     }
 }
 
@@ -58,6 +60,7 @@
     }
     .takenoteone-container{
         width: 60vw;
+        box-shadow: 0px 0px 2px grey 
     }
 }
 
@@ -71,6 +74,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0px 0px 2px grey 
 }
 
 .take-note-two-input-title{
@@ -140,6 +144,7 @@
     }
     .takenotetwo-container{
         width: 80vw;
+        box-shadow: 0px 0px 2px grey 
     }
 }
 
@@ -151,6 +156,7 @@
    
     .takenotetwo-container{
         width: 60vw;
+        box-shadow: 0px 0px 2px grey 
     }
 }
 
@@ -164,3 +170,8 @@
     flex-flow: row wrap;
     
 }
+
+.drawing-icon {
+    opacity: 0.5; /* Adjust the opacity value as desired */
+    cursor: not-allowed;
+  }

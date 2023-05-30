@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient,HttpHeaders} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,8 @@ export class HttpService {
   }
 
   //Get Services
-  GetService(){
-
+  GetService(url:any,httpHeadersOptions:any){
+    return this.httpClient.get(this.BaseUrl+url,httpHeadersOptions)
   }
   //Put Services
   PutService(){
