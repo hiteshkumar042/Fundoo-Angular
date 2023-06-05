@@ -1,177 +1,197 @@
 // Take Note One Card //
 
-
-.takenoteone-container{
-    width: 40vw;
-    height: 6vh;
-    margin: 1em auto;
-    padding: 2px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0px 0px 2px grey ;
+.takenoteone-container {
+  width: 40vw;
+  height: 6vh;
+  margin: 1em auto;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 2px grey;
 }
-.take-a-note-input::placeholder{
-   padding-left: 12px;
-   font-family: Roboto;
-   font-weight: 400;
-   font-size: large;
-   color: #4C4C4C;
-}
-
-.take-a-note-input{
-    height:100%;
-    outline: none;
-    border: none;
-    
+.take-a-note-input::placeholder {
+  padding-left: 12px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: large;
+  color: #4c4c4c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.take-note-one-icons{
-    width: 150px;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 10px;
+.take-a-note-input {
+  height: 100%;
+  outline: none;
+  border: none;
 }
 
+.take-note-one-icons {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+}
 
 //Media Queries for rensponsive take note one
-@media screen and  (max-width:655px) {
-    .take-a-note-input{
-        min-width: 100px;
-
-    }
-    .take-note-one-icons{
-        width: 100px;
-    }
-    .takenoteone-container{
-        width: 80vw;
-        box-shadow: 0px 0px 2px grey 
-    }
+@media screen and (max-width: 655px) {
+  .take-a-note-input {
+    min-width: 100px;
+  }
+  .take-note-one-icons {
+    width: 100px;
+  }
+  .takenoteone-container {
+    width: 80vw;
+    box-shadow: 0px 0px 2px grey;
+  }
 }
 
-@media screen and (min-width:650px) and (max-width:1150px) {
-    .take-a-note-input{
-        min-width: 100px;
-
-    }
-    .take-note-one-icons{
-        width: 100px;
-    }
-    .takenoteone-container{
-        width: 60vw;
-        box-shadow: 0px 0px 2px grey 
-    }
+@media screen and (min-width: 650px) and (max-width: 1150px) {
+  .take-a-note-input {
+    min-width: 100px;
+  }
+  .take-note-one-icons {
+    width: 100px;
+  }
+  .takenoteone-container {
+    width: 60vw;
+    box-shadow: 0px 0px 2px grey;
+  }
 }
 
 // Take Note Two Card //
-.takenotetwo-container{
-    width: 40vw;
-    min-height: 17vh;
-    margin: 1em auto;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0px 0px 2px grey 
+.takenotetwo-container {
+  width: 40vw;
+  min-height: 17vh;
+  margin: 1em auto;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 0px 2px grey;
 }
 
-.take-note-two-input-title{
-    width: 90%;
-    height: 28px;
-    margin: 0;
-    outline: none;
-    border: none;
+.take-note-two-input-title {
+  width: 90%;
+  height: 28px;
+  margin: 0;
+  outline: none;
+  border: none;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: medium;
+  color: #4c4c4c;
 }
 
-.take-note-two-input-title::placeholder{
-
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: medium;
-    color: #4C4C4C;
- }
-.take-note-two-content{
-    width: 100%;
-    height: 28px;
-}
-.note-two-title-container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.take-note-two-input-title::placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: medium;
+  color: #4c4c4c;
 }
 
-.take-note-two-content{
-    height: 28px;
-    margin: 0;
-    outline: none;
-    border: none;
+.take-note-two-input-title:focus {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: medium;
+  color: #4c4c4c;
 }
 
-.take-note-two-content::placeholder{
-
-    font-family: Roboto;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    font-size: 14px;
-    color: #4C4C4C;
- }
-
- //push pin 
- img{
-    width: 32px;
-    height: 19px;
+.take-note-two-content {
+  width: 100%;
+  height: 28px;
+}
+.note-two-title-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
- .all-icons{
-    border: none;
-    border-radius: 30%;
-    background: none;
-    transition: width 0.6s, height 0.6s;
- }
+.take-note-two-content {
+  height: 28px;
+  margin: 0;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  resize: none;
+  font-family: Roboto;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+  color: #4c4c4c;
 
- .all-icons:hover{
-    background-color: rgb(223, 216, 216);
-    cursor: pointer;
 }
 
- //take Note 2 Responsiveness
- @media screen and  (max-width:655px) {
-    .take-a-note-input{
-        min-width: 100px;
-
-    }
-    .takenotetwo-container{
-        width: 80vw;
-        box-shadow: 0px 0px 2px grey 
-    }
+.take-note-two-content::placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+  color: #4c4c4c;
 }
 
-@media screen and (min-width:650px) and (max-width:1150px) {
-    .take-note-two-input-title{
-        min-width: 100px;
+.take-note-two-content:focus {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: medium;
+  color: #4c4c4c;
+}
 
-    }
-   
-    .takenotetwo-container{
-        width: 60vw;
-        box-shadow: 0px 0px 2px grey 
-    }
+//push pin
+img {
+  width: 32px;
+  height: 19px;
+}
+
+.all-icons {
+  border: none;
+  border-radius: 30%;
+  background: none;
+  transition: width 0.6s, height 0.6s;
+}
+
+.all-icons:hover {
+  background-color: rgb(223, 216, 216);
+  cursor: pointer;
+}
+
+//take Note 2 Responsiveness
+@media screen and (max-width: 655px) {
+  .take-a-note-input {
+    min-width: 100px;
+  }
+  .takenotetwo-container {
+    width: 80vw;
+    box-shadow: 0px 0px 2px grey;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 1150px) {
+  .take-note-two-input-title {
+    min-width: 100px;
+  }
+
+  .takenotetwo-container {
+    width: 60vw;
+    box-shadow: 0px 0px 2px grey;
+  }
 }
 
 //icon Container
 
-.icons-container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-flow: row wrap;
-    
+.icons-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .drawing-icon {
-    opacity: 0.5; /* Adjust the opacity value as desired */
-    cursor: not-allowed;
-  }
+  opacity: 0.5; /* Adjust the opacity value as desired */
+  cursor: not-allowed;
+}

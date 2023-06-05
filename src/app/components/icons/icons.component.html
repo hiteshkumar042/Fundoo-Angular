@@ -30,7 +30,7 @@
     </button>
 
     <mat-menu class="more-icons" #more="matMenu">
-        <button mat-menu-item>Delete note</button>
+        <button mat-menu-item (click)="OnClickTrash()" >Delete note</button>
         <button mat-menu-item>Add label</button>
         <button mat-menu-item>Add drawing</button>
         <button mat-menu-item>Make a copy</button>

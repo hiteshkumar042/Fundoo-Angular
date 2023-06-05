@@ -48,7 +48,7 @@
   display: flex;
   align-items: center;
   position: absolute;
-  left: 20%;
+  left: 22%;
   flex-direction: row;
 }
 .mat-search-icon {
@@ -64,7 +64,7 @@
 }
 
 .search-nav-field {
-  width: 600px;
+  width: 590px;
   height: 45px;
   border: none;
   background-color: #e9eaea;
@@ -105,7 +105,7 @@ input[type="text"]::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 30%;
+  width: 33%;
 }
 .icons-contain{
   display: flex;
@@ -198,4 +198,8 @@ input[type="text"]::placeholder {
 .nav-text{
   font-size: 16px;
   margin-bottom: 1.3em;
+}
+
+.example-sidenav-container{
+  min-height: 90vh;
 }

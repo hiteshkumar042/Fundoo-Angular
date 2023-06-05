@@ -33,4 +33,24 @@ export class NoteService {
       this.httpHeadersOption
     );
   }
+
+  //Update note Service
+  UpdateNoteService(reqBody:any) {
+    return this.httpService.PostService('notes/updateNotes',reqBody,this.httpHeadersOption)
+  }
+
+  //get Archive Note Data
+  getArchivedNotesService(){
+    return this.httpService.GetService('notes/getArchiveNotesList',this.httpHeadersOption);
+  }
+
+  //get Trash Note data
+  getTrashNotesService(){
+    return this.httpService.GetService('notes/getTrashNotesList',this.httpHeadersOption);
+  }
+
+  trashNoteService(){
+    return this.httpService
+  }
+
 }

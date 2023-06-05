@@ -32,6 +32,11 @@ import { DisplaynoteComponent } from './components/displaynote/displaynote.compo
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { TrashComponent } from './components/trash/trash.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -46,7 +51,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CreatenoteComponent,
     IconsComponent,
     DisplaynoteComponent,
-    GetallnotesComponent
+    GetallnotesComponent,
+    UpdatenoteComponent,
+    ArchiveComponent,
+    TrashComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +63,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,MatFormFieldModule,MatInputModule,MatIconModule,
     MatButtonModule,MatCheckboxModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatSnackBarModule,MatSidenavModule,
     NgFor,NgIf,MatToolbarModule,MatButtonModule,MatIconModule,MatSidenavModule,MatListModule,MatGridListModule,MatRippleModule,
-    MatTooltipModule,MatMenuModule,FlexLayoutModule
+    MatTooltipModule,MatMenuModule,FlexLayoutModule,MatDialogModule,RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

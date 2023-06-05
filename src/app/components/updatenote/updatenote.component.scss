@@ -1,0 +1,101 @@
+.updatenote-container {
+    width: 40vw;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 2px grey;
+    min-height: 20vh;
+    max-height: 40vh;
+  }
+  
+  .update-input-title {
+    width: 90%;
+    height: 28px;
+    margin: 0;
+    outline: none;
+    border: none;
+    font-family: Roboto
+  }
+  
+  .update-input-title {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: medium;
+    color: #4c4c4c;
+  }
+ 
+  .update-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .update-two-content {
+     min-height: 60px;
+    max-height: 160px;
+    margin: 0;
+    outline: none;
+    border: none;
+    resize: none;
+    font-family: Roboto;
+    width: 100%;
+    overflow: hidden;
+  
+  }
+  
+  .update-two-content::placeholder {
+    font-family: Roboto;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    font-size: 14px;
+    color: #4c4c4c;
+  }
+  
+  //push pin
+  img {
+    width: 32px;
+    height: 19px;
+  }
+  
+  .all-icons {
+    border: none;
+    border-radius: 30%;
+    background: none;
+    transition: width 0.6s, height 0.6s;
+  }
+  
+  .all-icons:hover {
+    background-color: rgb(223, 216, 216);
+    cursor: pointer;
+  }
+  
+  //take Note 2 Responsiveness
+  @media screen and (max-width: 655px) {
+    .take-a-note-input {
+      min-width: 100px;
+    }
+    .updatenote-container {
+      width: 80vw;
+      box-shadow: 0px 0px 2px grey;
+    }
+  }
+  
+  @media screen and (min-width: 650px) and (max-width: 1150px) {
+    .update-input-title {
+      min-width: 100px;
+    }
+  
+    .updatenote-container {
+      width: 60vw;
+      box-shadow: 0px 0px 2px grey;
+    }
+  }
+
+  .update-icons-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }

@@ -1,13 +1,11 @@
 <div style="background-color: #FAFAFA;">
-    <mat-card>
+    <mat-card style="position: sticky; top: 0px; z-index: 100;">
         <mat-toolbar class="navbar-main" color="primary">
             <div class="left-part">
                 <button class="icon-border" mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
                 <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" alt="">
                 <div class="app-name-title">Fundoo</div>
             </div>
-
-
             <!-- Search Bar -->
             <div class="center-part">
                 <mat-icon class="mat-search-icon">search</mat-icon>
@@ -19,12 +17,11 @@
                 <div class="icons-contain">
                     <mat-icon matTooltip="Refresh" class="icon-border">refresh</mat-icon>
                     <mat-icon matTooltip="List view" class="icon-border">view_agenda</mat-icon>
-
                     <mat-icon matTooltip="Setting" class="icon-border">settings</mat-icon>
                 </div>
                 <div class="profile-contain">
                     <mat-icon matTooltip="google apps" class="icon-border">apps</mat-icon>
-                    <img matTooltip="Googel Account" class="gb_k_gb" src="../../../assets/profilePic.png">
+                    <img matTooltip="Googel Account" class="gb_k_gb icon-border" src="../../../assets/profilePic.png">
                 </div>
             </div>
 
@@ -41,17 +38,27 @@
             fixedTopGap="56">
             <mat-nav-list>
                 <!-- Notes -->
-                <button mat-menu-item routerLink="dashboard/notes" class="nav-menu" [class.selected]="selectedItem === 'notes'" (click)="selectItem('notes')">
+                <button mat-menu-item routerLink="notes" class="nav-menu"  routerLinkActive="selected">
                     <img src="../../../assets/lightbulb_FILL0_wght400_GRAD0_opsz48.svg" class="nav-icon" alt="">
                     <span class="nav-text">Notes</span>
                 </button>
+                <!-- Reminder -->
+                <button mat-menu-item routerLink="reminder" class="nav-menu"  routerLinkActive="selected">
+                    <img src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.svg" class="nav-icon" alt="">
+                    <span class="nav-text">Reminder</span>
+                </button>
+                <!-- Edit label -->
+                <button mat-menu-item routerLink="labels" class="nav-menu"  routerLinkActive="selected">
+                    <img src="../../../assets/edit_FILL0_wght400_GRAD0_opsz48.svg" class="nav-icon" alt="">
+                    <span class="nav-text">Edit labels</span>
+                </button>
                 <!-- Archive  -->
-                <button mat-menu-item routerLink="dashboard/notes" class="nav-menu" [class.selected]="selectedItem === 'archive'" (click)="selectItem('archive')" >
+                <button mat-menu-item routerLink="archive" class="nav-menu" routerLinkActive="selected">
                     <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz40.svg" alt="" class="nav-icon">
                     <span class="nav-text">Archive</span>
                 </button>
                 <!-- Bin -->
-                <button mat-menu-item routerLink="dashboard/notes" class="nav-menu" [class.selected]="selectedItem==='bin'" (click)="selectItem('bin')">
+                <button mat-menu-item routerLink="trash" class="nav-menu" routerLinkActive="selected">
                     <img src="../../../assets/delete_FILL0_wght400_GRAD0_opsz40.svg" alt="" class="nav-icon">
                     <span class="nav-text">Bin</span>
                 </button>

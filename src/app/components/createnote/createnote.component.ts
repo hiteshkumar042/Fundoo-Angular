@@ -10,6 +10,9 @@ export class CreatenoteComponent {
   takeNoteCondition = true;
   title = '';
   description = '';
+  adjustTextareaHeight(){
+
+  }
 
   //switch between take note one and two
   takeNoteTwoCall() {

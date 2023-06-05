@@ -1,0 +1,20 @@
+<mat-card class="updatenote-container">
+    <!-- First Row -->
+    <div class="update-title-container">
+        <input type="text" placeholder="Title" class='update-input-title' [(ngModel)]="title" spellcheck="false">
+        <button matTooltip="Push pin" class="all-icons">
+            <img src="../../../assets//push_pin_FILL0_wght400_GRAD0_opsz40.svg">
+    
+        </button>
+    </div>
+    <!-- Second Row -->
+    <textarea  placeholder="Take a note..."  class="update-two-content"[(ngModel)]="description" spellcheck="false"></textarea>
+
+    <!-- Third Row -->
+    <div class="update-icons-container">
+        <app-icons  style="width: 75%;"></app-icons>
+        <button mat-button (click)="closeButton()" matTooltip="Save and close" >Close</button>
+    </div>
+</mat-card>
+
+<!-- [noteDataInIcon]="data" -->
