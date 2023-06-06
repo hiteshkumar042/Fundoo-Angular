@@ -5,12 +5,10 @@
                 (mouseleave)="hoveredIndex = null">
                 <h3 class="note-three-title" (click)="openDialog(note)">{{note.title}}</h3>
                 <p (click)="openDialog(note)" >{{note.description}}</p>
-                <app-icons [noteDataInIcon]="note" [ngStyle]="{'visibility': (hoveredIndex === note.id) ? 'visible' : 'hidden' }"></app-icons>
+                <app-icons [noteDataInIcon]="note" (refreshPageEvent)="refreshDisplayData()" [ngStyle]="{'visibility': (hoveredIndex === note.id) ? 'visible' : 'hidden' }"></app-icons>
             </mat-card>
         </div>
 </div>
-
-
 
 
 

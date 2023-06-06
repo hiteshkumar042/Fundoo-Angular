@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 
@@ -8,6 +8,8 @@ import { UpdatenoteComponent } from '../updatenote/updatenote.component';
   styleUrls: ['./displaynote.component.scss'],
 })
 export class DisplaynoteComponent implements OnInit {
+  
+  @Output() updateNoteEvent = new EventEmitter<Object>();
   ngOnInit() {}
   
   //individual hover of selected take note three
@@ -17,6 +19,13 @@ export class DisplaynoteComponent implements OnInit {
   constructor(private dialog: MatDialog) {}
   //Sending noteObj data to Dialog
   openDialog(note: any) {
-    this.dialog.open(UpdatenoteComponent, { data: note });
+   const dialogRef= this.dialog.open(UpdatenoteComponent, { data: note });
+    dialogRef.afterClosed().subscribe((result)=>{
+      this.updateNoteEvent.emit()
+    })
+  }
+
+  refreshDisplayData(){
+    this.updateNoteEvent.emit()
   }
 }

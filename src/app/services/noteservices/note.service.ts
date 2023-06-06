@@ -49,8 +49,13 @@ export class NoteService {
     return this.httpService.GetService('notes/getTrashNotesList',this.httpHeadersOption);
   }
 
-  trashNoteService(){
-    return this.httpService
+  //delete Note
+  trashNoteService(reqBody:any){
+    return this.httpService.PostService('notes/trashNotes',reqBody,this.httpHeadersOption)
+  }
+
+  archiveNoteService(reqBody:any){
+    return this.httpService.PostService('notes/archiveNotes',reqBody,this.httpHeadersOption)
   }
 
 }

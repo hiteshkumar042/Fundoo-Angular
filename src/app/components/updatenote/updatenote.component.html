@@ -12,8 +12,8 @@
 
     <!-- Third Row -->
     <div class="update-icons-container">
-        <app-icons  style="width: 75%;"></app-icons>
-        <button mat-button (click)="closeButton()" matTooltip="Save and close" >Close</button>
+        <app-icons [noteDataInIcon]="data" style="width: 75%;"></app-icons>
+        <button mat-button  (click)="closeButton()" matTooltip="Save and close" >Close</button>
     </div>
 </mat-card>
 

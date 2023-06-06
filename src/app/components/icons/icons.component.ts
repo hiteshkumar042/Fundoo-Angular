@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {NoteService} from '../../services/noteservices/note.service'
 
 @Component({
   selector: 'app-icons',
@@ -6,11 +7,32 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./icons.component.scss']
 })
 export class IconsComponent {
-
+  constructor(private noteService:NoteService){}
   @Input() noteDataInIcon:any;
-  
+  @Output() refreshPageEvent = new EventEmitter<any>();
+  reqBody:any = ""
+
+//On Click of delete icon
   OnClickTrash(){
-      console.log(this.noteDataInIcon.id)
-      console.log('event triggered from icon component and onclick fn from icons compo')
+      this.reqBody = {
+        "noteIdList": [this.noteDataInIcon.id],
+        "isDeleted": true
+      }
+      this.noteService.trashNoteService(this.reqBody).subscribe(data =>{
+        this.refreshPageEvent.emit()
+        console.log(data)
+      })
   }
+
+  //On Click of Archive icon
+  OnClickArchive(){
+    this.reqBody = {
+      "noteIdList": [this.noteDataInIcon.id],
+      "isArchived": true
+    }
+    this.noteService.archiveNoteService(this.reqBody).subscribe(data =>{
+      this.refreshPageEvent.emit()
+      console.log(data)
+    })
+}
 }
