@@ -1,34 +1,12 @@
-<div class="note3container" style=" padding: 2em;" > 
-        <div *ngFor="let note of noteThreeData" class="note3-items-container">
-            <mat-card style="padding: 1.2em" class="takenotethree-container"
-                [ngClass]="{ 'hovered': hoveredIndex === note.id }" (mouseenter)="hoveredIndex = note.id"
-                (mouseleave)="hoveredIndex = null">
-                <h3 class="note-three-title" (click)="openDialog(note)">{{note.title}}</h3>
-                <p (click)="openDialog(note)" >{{note.description}}</p>
-                <app-icons [noteDataInIcon]="note" (refreshPageEvent)="refreshDisplayData()" [ngStyle]="{'visibility': (hoveredIndex === note.id) ? 'visible' : 'hidden' }"></app-icons>
-            </mat-card>
-        </div>
-</div>
-
-
-
-
-
-
-
-
-<!-- <div class="note3container" style=" padding: 2em;">
-    <div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayout.xs="column" fxLayoutGap="20px grid">
-
-        <div *ngFor="let note of noteThreeData" fxFlex.gt-xs="50%" fxFlex.gt-sm="25%" fxFlex.gt-md="20%">
-            <mat-card style="padding: 1.2em" class="takenotethree-container" (click)="openDialog(note)"
-                [ngClass]="{ 'hovered': hoveredIndex === note.id }" (mouseenter)="hoveredIndex = note.id"
-                (mouseleave)="hoveredIndex = null">
-                <h3 class="note-three-title">{{note.title}}</h3>
-                <p>{{note.description}}</p>
-                <app-icons [ngStyle]="{'visibility': (hoveredIndex === note.id) ? 'visible' : 'hidden' }"></app-icons>
-            </mat-card>
-        </div>
+<div class="note3container">
+    <div *ngFor="let note of noteThreeData | searchnote:searchQuery" class="note3-items-container">
+        <mat-card style="padding: 1.2em" class="takenotethree-container"
+            [ngClass]="{ 'hovered': hoveredIndex === note.id }" (mouseenter)="hoveredIndex = note.id"
+            (mouseleave)="hoveredIndex = null">
+            <h3 class="note-three-title" (click)="openDialog(note)">{{note.title}}</h3>
+            <p (click)="openDialog(note)">{{note.description}}</p>
+            <app-icons [noteDataInIcon]="note" (refreshPageEvent)="refreshDisplayData()"
+                [ngStyle]="{'visibility': (hoveredIndex === note.id) ? 'visible' : 'hidden' }"></app-icons>
+        </mat-card>
     </div>
-
-</div> -->
+</div>

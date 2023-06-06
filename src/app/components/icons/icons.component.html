@@ -1,4 +1,4 @@
-<div class="icons-comp-container">
+<div *ngIf="!isTrash" class="icons-comp-container">
 
     <!-- remind me icon -->
     <button matTooltip="Remind me" class="all-icons">
@@ -21,8 +21,9 @@
 
     </button>
     <!-- Archive icon -->
-    <button matTooltip="Archive" class="all-icons">
-        <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz40.svg" (click)="OnClickArchive()">
+    <button class="all-icons">
+        <img *ngIf="!isArchived" matTooltip="Archive" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz40.svg" (click)="OnClickArchive()">
+        <img *ngIf="isArchived" matTooltip="Unarchive" src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg " (click)="OnClickUnArchive()">
     </button>
     <!-- More icon -->
     <button matTooltip="More" [matMenuTriggerFor]="more" class="all-icons">
@@ -30,11 +31,21 @@
     </button>
 
     <mat-menu class="more-icons" #more="matMenu">
-        <button mat-menu-item (click)="OnClickTrash()" >Delete note</button>
+        <button mat-menu-item (click)="OnClickTrash()">Delete note</button>
         <button mat-menu-item>Add label</button>
         <button mat-menu-item>Add drawing</button>
         <button mat-menu-item>Make a copy</button>
         <button mat-menu-item>Show tick boxes</button>
         <button mat-menu-item>Copy to Google Docs</button>
     </mat-menu>
+</div>
+
+
+<div *ngIf="isTrash" class="icons-delete-container">
+    <button matTooltip="Delete Forever" (click)="onClickDeleteForever()" class="all-icons">
+        <img class="side-icons" src="../../../assets/delete_forever_FILL0_wght400_GRAD0_opsz48.svg">
+    </button>
+    <button matTooltip="Restore" (click)="onClickRestoreNote()" class="all-icons">
+        <img class="side-icons" src="../../../assets/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg">
+    </button>
 </div>

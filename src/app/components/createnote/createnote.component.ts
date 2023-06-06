@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { NoteService } from '../../services/noteservices/note.service';
 
 @Component({
@@ -10,9 +10,7 @@ export class CreatenoteComponent {
   takeNoteCondition = true;
   title = '';
   description = '';
-  adjustTextareaHeight(){
-
-  }
+  @Output() createnoteRefreshEvent = new EventEmitter<Object>();
 
   //switch between take note one and two
   takeNoteTwoCall() {
@@ -29,9 +27,10 @@ export class CreatenoteComponent {
         description: this.description,
       };
       //create note api service
-      this.noteService.CreateNoteService(reqdata).subscribe((obs) => {
+      this.noteService.CreateNoteService(reqdata).subscribe((obs:any) => {
         console.log(obs);
         this.takeNoteTwoCall();
+        this.createnoteRefreshEvent.emit();
       });
     }
     //If title and description are not specified(empty)

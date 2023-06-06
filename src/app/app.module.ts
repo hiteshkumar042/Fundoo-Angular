@@ -37,6 +37,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { RouterModule } from '@angular/router';
+import { SearchnotePipe } from './pipe/searchnote.pipe';
 
 
 
@@ -55,6 +56,7 @@ import { RouterModule } from '@angular/router';
     UpdatenoteComponent,
     ArchiveComponent,
     TrashComponent,
+    SearchnotePipe,
   ],
   imports: [
     BrowserModule,

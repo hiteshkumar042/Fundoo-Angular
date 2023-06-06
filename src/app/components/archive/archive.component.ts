@@ -10,7 +10,7 @@ export class ArchiveComponent implements OnInit {
   
   constructor(private noteService : NoteService){}
   
-  ngOnInit(): void {
+  ngOnInit() {
     this.archiveNotes()
   }
   archiveNotesList:[]=[];

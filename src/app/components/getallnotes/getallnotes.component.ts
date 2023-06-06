@@ -13,6 +13,7 @@ export class GetallnotesComponent implements OnInit {
     this.getNotes()
   }
 
+
   getNotes(){
     this.noteService.getAllNotesService().subscribe((notes:any) =>{
       console.log(notes)

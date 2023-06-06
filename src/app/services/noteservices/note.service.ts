@@ -54,8 +54,20 @@ export class NoteService {
     return this.httpService.PostService('notes/trashNotes',reqBody,this.httpHeadersOption)
   }
 
+  //archive note
   archiveNoteService(reqBody:any){
     return this.httpService.PostService('notes/archiveNotes',reqBody,this.httpHeadersOption)
   }
+  //delete forever
+ 
+  deleteForeverService(reqBody:any){
+    return this.httpService.PostService('notes/deleteForeverNotes',reqBody,this.httpHeadersOption)
+  }
+
+  //restore note
+  restoreNoteService(reqBody:any){
+    return this.httpService.PostService('notes/trashNotes',reqBody,this.httpHeadersOption)
+  }
+
 
 }
