@@ -8,15 +8,19 @@ import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassw
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
+import {authGuard} from '../app/auth/auth.guard'
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', redirectTo: 'login',pathMatch:'full' },
+  { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'forget-password/reset-password', component: ResetpasswordComponent },
   { path: 'forget-password', component: ForgetpasswordComponent },
+  { path: 'dashboard', redirectTo: 'dashboard/notes',pathMatch:'full'},
+  
   {
     path: 'dashboard',
-    component: DashboardComponent,
+    component: DashboardComponent, canActivate:[authGuard],
     children: [
       { path: 'notes', component: GetallnotesComponent },
       { path: 'archive', component: ArchiveComponent },
