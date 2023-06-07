@@ -11,10 +11,30 @@
 
     </button>
     <!-- background color icon -->
-    <button matTooltip="Background options" class="all-icons">
+    <button matTooltip="Background options" [matMenuTriggerFor]="color" class="all-icons">
         <img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz40.svg">
-
     </button>
+    <mat-menu #color="matMenu">
+        <div style="padding: 2px;">
+            <div class="icon-color-container">
+                <button class="color-circle" matTooltip="Default" (click)="onClickNoteColor('#FFFFFF')"><img
+                        src="../../../assets/format_color_reset_FILL0_wght400_GRAD0_opsz48.svg"></button>
+                <button class="color-circle" matTooltip="Red" style="background-color: #F28B82;" (click)="onClickNoteColor('#F28B82')"></button>
+                <button class="color-circle" matTooltip="Orange" style="background-color: #FBBC04;" (click)="onClickNoteColor('#FBBC04')"></button>
+            </div>
+            <div class="icon-color-container">
+                <button class="color-circle" matTooltip="Yellow" style="background-color: #FFF475;" (click)="onClickNoteColor('#FFF475')"></button>
+                <button class="color-circle" matTooltip="Green" style="background-color: #CCFF90;" (click)="onClickNoteColor('#CCFF90')"></button>
+                <button class="color-circle" matTooltip="Teal" style="background-color: #A7FFEB;" (click)="onClickNoteColor('#A7FFEB')"></button>
+            </div>
+            <div class="icon-color-container">
+                <button class="color-circle" matTooltip="Blue" style="background-color: #CBF0F8;" (click)="onClickNoteColor('#CBF0F8')"></button>
+                <button class="color-circle" matTooltip="Dark blue" style="background-color: #AECBFA;" (click)="onClickNoteColor('#AECBFA')"></button>
+                <button class="color-circle" matTooltip="Purple" style="background-color: #D7AEFB;" (click)="onClickNoteColor('#D7AEFB')"></button>
+            </div>
+        </div>
+    </mat-menu>
+
     <!-- add image icons -->
     <button matTooltip="Add image" class="all-icons">
         <img src="../../../assets/image_FILL0_wght400_GRAD0_opsz40.svg">
@@ -22,8 +42,10 @@
     </button>
     <!-- Archive icon -->
     <button class="all-icons">
-        <img *ngIf="!isArchived" matTooltip="Archive" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz40.svg" (click)="OnClickArchive()">
-        <img *ngIf="isArchived" matTooltip="Unarchive" src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg " (click)="OnClickUnArchive()">
+        <img *ngIf="!isArchived" matTooltip="Archive" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz40.svg"
+            (click)="OnClickArchive()">
+        <img *ngIf="isArchived" matTooltip="Unarchive" src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg "
+            (click)="OnClickUnArchive()">
     </button>
     <!-- More icon -->
     <button matTooltip="More" [matMenuTriggerFor]="more" class="all-icons">

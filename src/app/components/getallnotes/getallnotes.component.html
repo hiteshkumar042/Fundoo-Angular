@@ -1,2 +1,2 @@
-<app-createnote ></app-createnote>
+<app-createnote (createnoteRefreshEvent)="getNotes()" ></app-createnote>
 <app-displaynote [noteThreeData] = "noteObj" (updateNoteEvent)="getNotes()" ></app-displaynote>

@@ -8,24 +8,26 @@ import { NoteService } from '../../services/noteservices/note.service';
 })
 export class IconsComponent implements OnInit {
   isTrash: boolean = false;
-  isArchived :boolean=false;
-  constructor(private noteService: NoteService) {}
-  
+  isArchived: boolean = false;
+  constructor(private noteService: NoteService) { }
+
   //On Load of icon comp  
   ngOnInit() {
-    if(this.noteDataInIcon?.isDeleted===true){
+    if (this.noteDataInIcon?.isDeleted === true) {
       this.isTrash = true;
-    } 
-    if(this.noteDataInIcon?.isArchived===true){
-      this.isArchived=true
-    } 
+    }
+    if (this.noteDataInIcon?.isArchived === true) {
+      this.isArchived = true
+    }
   }
 
   @Input() noteDataInIcon: any;
+  createNoteColor:string=""
   @Output() refreshPageEvent = new EventEmitter<any>();
+  @Output() backgroundColorEvent = new EventEmitter<any>();
   reqBody: any = '';
 
-  
+
 
   //On Click of delete icon
   OnClickTrash() {
@@ -53,14 +55,14 @@ export class IconsComponent implements OnInit {
 
   //OnClick Unarchive
 
-  OnClickUnArchive(){
+  OnClickUnArchive() {
     this.reqBody = {
       noteIdList: [this.noteDataInIcon.id],
       isArchived: false,
     };
     this.noteService.archiveNoteService(this.reqBody).subscribe((data) => {
       this.refreshPageEvent.emit();
-      
+
     });
   }
 
@@ -80,9 +82,27 @@ export class IconsComponent implements OnInit {
       noteIdList: [this.noteDataInIcon.id],
       isDeleted: false,
     }
-    this.noteService.restoreNoteService(reqdata).subscribe((data)=>{
+    this.noteService.restoreNoteService(reqdata).subscribe((data) => {
       this.refreshPageEvent.emit();
     })
 
+  }
+
+
+  //on click of color change 
+  onClickNoteColor(bgColor: string) {
+   this.createNoteColor = bgColor
+   this.backgroundColorEvent.emit(this.createNoteColor);
+   
+    if(this.noteDataInIcon!=null){
+      let reqBody = {
+        noteIdList: [this.noteDataInIcon.id],
+        color: bgColor,
+      }
+      this.noteService.changeBackgroundColorService(reqBody).subscribe(res => {
+        this.refreshPageEvent.emit()
+      })
+    }
+    
   }
 }

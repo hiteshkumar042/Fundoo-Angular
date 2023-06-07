@@ -10,6 +10,7 @@ export class CreatenoteComponent {
   takeNoteCondition = true;
   title = '';
   description = '';
+  backgroundColor =""
   @Output() createnoteRefreshEvent = new EventEmitter<Object>();
 
   //switch between take note one and two
@@ -25,6 +26,7 @@ export class CreatenoteComponent {
       let reqdata = {
         title: this.title,
         description: this.description,
+        color:this.backgroundColor
       };
       //create note api service
       this.noteService.CreateNoteService(reqdata).subscribe((obs:any) => {
@@ -37,5 +39,9 @@ export class CreatenoteComponent {
     else {
       this.takeNoteTwoCall();
     }
+  }
+
+  setBackgroundColor($event:any){
+    this.backgroundColor=$event
   }
 }

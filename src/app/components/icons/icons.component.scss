@@ -24,7 +24,29 @@ img{
 }
 
 .all-icons:hover{
-    background-color: rgb(223, 216, 216);
+    background: none;
     cursor: pointer;
+    
 }
 
+//Color circle
+
+.color-circle{
+    width: 35px;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 2em;
+    margin: 2px 2px ;
+}
+
+.color-circle:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.icon-color-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

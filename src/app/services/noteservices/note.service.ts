@@ -69,5 +69,9 @@ export class NoteService {
     return this.httpService.PostService('notes/trashNotes',reqBody,this.httpHeadersOption)
   }
 
+  //Chnage background color service
+  changeBackgroundColorService(reqBody:any){
+    return this.httpService.PostService('notes/changesColorNotes',reqBody,this.httpHeadersOption)
+  }
 
 }
