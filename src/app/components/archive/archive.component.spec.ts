@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ArchiveComponent } from './archive.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DisplaynoteComponent } from '../displaynote/displaynote.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { SearchnotePipe } from 'src/app/pipe/searchnote.pipe';
 
 describe('ArchiveComponent', () => {
   let component: ArchiveComponent;
@@ -8,7 +12,10 @@ describe('ArchiveComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ArchiveComponent]
+      declarations: [ArchiveComponent,DisplaynoteComponent,SearchnotePipe],
+      imports:[HttpClientModule,MatDialogModule],
+      
+      
     });
     fixture = TestBed.createComponent(ArchiveComponent);
     component = fixture.componentInstance;

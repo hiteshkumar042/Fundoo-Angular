@@ -11,6 +11,7 @@ export class UpdatenoteComponent implements OnInit {
   noteId: any = ' ';
   title: string = ' ';
   description: string = ' ';
+  color:string = ''
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -22,6 +23,7 @@ export class UpdatenoteComponent implements OnInit {
     this.noteId = this.data.id;
     this.title = this.data.title;
     this.description = this.data.description;
+    this.color = this.data.color;
   }
 
   //OnClick of close button
@@ -30,6 +32,7 @@ export class UpdatenoteComponent implements OnInit {
       noteId: this.noteId,
       title: this.title,
       description: this.description,
+      color:this.color
     };
     //if title or desc chnaged then only it will hit update api
     if(this.title!=this.data.title || this.description!=this.data.description){
@@ -43,4 +46,9 @@ export class UpdatenoteComponent implements OnInit {
     }
     
   }
+  //Chnage Color in Update Note
+  setBackGround($event:any){
+    this.color = $event
+  }
+
 }

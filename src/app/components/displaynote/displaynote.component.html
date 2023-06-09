@@ -1,5 +1,46 @@
 <div class="note3container">
     <div *ngFor="let note of noteThreeData | searchnote:searchQuery" class="note3-items-container">
+        <mat-card class="takenotethree-container" [style.background-color]="note.color"
+            [ngClass]="{ 'hovered': hoveredIndex === note.id }" (mouseenter)="hoveredIndex = note.id"
+            (mouseleave)="hoveredIndex = null">
+            <h3 style="margin: 1.2em 1.2em 0 0.9em;" class="note-three-title" (click)="openDialog(note)">{{note.title}}</h3>
+            <p style="margin: 1.2em 1.2em 0 1.2em" (click)="openDialog(note)">{{note.description}}</p>
+            <app-icons style=" width: 94%; margin: 1em auto;" [noteDataInIcon]="note" (refreshPageEvent)="refreshDisplayData()"
+                [ngStyle]="{'visibility': (hoveredIndex === note.id) ? 'visible' : 'hidden' }"></app-icons>
+        </mat-card>
+    </div>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="note3container">
+    <div *ngFor="let note of noteThreeData | searchnote:searchQuery" class="note3-items-container">
         <mat-card style="padding: 1.2em;" class="takenotethree-container" [style.background-color]="note.color"
             [ngClass]="{ 'hovered': hoveredIndex === note.id }" (mouseenter)="hoveredIndex = note.id"
             (mouseleave)="hoveredIndex = null">
@@ -9,4 +50,4 @@
                 [ngStyle]="{'visibility': (hoveredIndex === note.id) ? 'visible' : 'hidden' }"></app-icons>
         </mat-card>
     </div>
-</div>
+</div> -->

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -36,8 +36,8 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
 import {MatDialogModule} from '@angular/material/dialog';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
-import { RouterModule } from '@angular/router';
 import { SearchnotePipe } from './pipe/searchnote.pipe';
+
 
 
 
@@ -61,11 +61,11 @@ import { SearchnotePipe } from './pipe/searchnote.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule,AppRoutingModule,
     MatCardModule,MatFormFieldModule,MatInputModule,MatIconModule,
     MatButtonModule,MatCheckboxModule,FormsModule,ReactiveFormsModule,HttpClientModule,MatSnackBarModule,MatSidenavModule,
     NgFor,NgIf,MatToolbarModule,MatButtonModule,MatIconModule,MatSidenavModule,MatListModule,MatGridListModule,MatRippleModule,
-    MatTooltipModule,MatMenuModule,FlexLayoutModule,MatDialogModule,RouterModule
+    MatTooltipModule,MatMenuModule,FlexLayoutModule,MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

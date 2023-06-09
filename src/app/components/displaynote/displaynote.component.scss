@@ -1,10 +1,10 @@
-.note3-items-container,
 .note3-items-container {
   box-shadow: 0px 0px 2px grey;
   min-width: 200px;
   max-width: 220px;
   min-height: 120px;
   max-height: 400px;
+  
 }
 
 .note3container {
@@ -13,7 +13,6 @@
   justify-content: center;
   align-items: baseline;
   gap: 20px;
-
   padding: 2em
 }
 
@@ -23,4 +22,15 @@
 
 .hovered {
   box-shadow: 0px 0px 4px 1px grey;
+}
+
+@media screen and (min-width: 0px) and (max-width:532px) {
+  .note3-items-container {
+    box-shadow: 0px 0px 2px grey;
+    min-width: 200px;
+    max-width: 300px;
+    min-height: 120px;
+    // max-height: 400px;
+    // border: 2px solid red;
+  }
 }
